@@ -1,0 +1,312 @@
+/* ===========================
+   BASE
+=========================== */
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    background-color: #2D333D;
+    color: #E3EBF8;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    text-align: center;
+    padding: 20px 0;
+    color: #B8C1CF;
+    font-size: 40px;
+}
+
+header a {
+    color: #B8C1CF;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #E3EDFB;
+    transition: 0.3s;
+}
+
+/* ===========================
+   HERO / INTRO
+=========================== */
+.hero, .project-hero, .div, .div2, .div3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #83888F;
+    padding: 50px;
+    gap: 2rem;
+    border: 10px solid #83888F;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.hero img, .project-hero img, .div img, .div2 img, .div3 img, .project-icon {
+    width: min(380px, 100%);
+    max-width: 100%;
+    border-radius: 10%;
+}
+
+.hero img.avatar, .div img.avatar, .div2 img.avatar {
+    border-radius: 50%;
+}
+
+.hero-text, .project-text, .container-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h1, .hero-text h2,
+.project-text h1, .project-text h2,
+.container-text h1, .container-text h2 {
+    margin: 0 0 20px;
+}
+
+.hero-text p, .project-text p, .container-text p, .info, .info2, .textY {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #E3EBF8;
+}
+
+/* ===========================
+   TITOLI SEZIONI
+=========================== */
+.section-title, #start {
+    text-align: center;
+    font-size: clamp(28px, 6vw, 50px);
+    font-weight: bold;
+    color: #B8C1CF;
+    margin: 40px 0;
+}
+
+/* Immagine principale storyboard */
+.main-storyboard img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0; /* occupa tutta la larghezza senza margini */
+}
+
+.main-storyboard figcaption {
+    text-align: center;
+    font-size: 18px;
+    color: #E3EBF8;
+    margin-top: 10px;
+}
+
+/* ===========================
+   BOTTONI
+=========================== */
+.button, .button2 {
+    display: inline-block;
+    padding: 20px 60px;
+    border-radius: 100px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.button { background-color: #83888F; color: #EAF2FF; }
+.button2 { background-color: #2D333D; color: #EAF2FF; }
+
+.button:hover, .button2:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* ===========================
+   GRIGLIE / CONTENITORI
+=========================== */
+.container, .container2, .project-grid, .grid-gallery {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0 auto;
+    width: 90%;
+}
+
+.item, .item2, .social-item, .grid-item3, figure {
+    text-align: center;
+}
+
+.item p, .item2 p, .social-item p, figcaption {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #B8C1CF;
+}
+
+/* ===========================
+   PROGETTI / IMG
+=========================== */
+.proj {
+    filter: grayscale(100%);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.proj:hover {
+    filter: grayscale(0%);
+}
+
+.imgY {
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.textY {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===========================
+   VIDEO
+=========================== */
+.video {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.video iframe {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    text-align: center;
+    color: #B8C1CF;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer img.divider {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* ===========================
+   MOON ICON
+=========================== */
+.moon {
+    font-size: 40px;
+    color: #E3EBF8;
+    display: block;
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+    .hero, .project-hero, .div, .div2, .div3 {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .hero-text, .project-text, .container-text {
+        text-align: center;
+    }
+
+    .imgY {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 28px;
+    }
+
+    .section-title, #start {
+        font-size: 36px;
+    }
+
+    .textY, .info, .info2 {
+        font-size: 16px;
+    }
+
+    .button, .button2 {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+
+    .video iframe {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 24px;
+    }
+
+    .hero-text h1, .hero-text h2,
+    .project-text h1, .project-text h2,
+    .container-text h1, .container-text h2 {
+        font-size: 28px;
+    }
+
+    .section-title, #start {
+        font-size: 28px;
+    }
+}
+
+.project-item {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1 / 1; /* quadrato */
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 480px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+.bottoneContatti {
+    background-color: #664a8b;
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
